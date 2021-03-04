@@ -203,7 +203,7 @@ COPY ./README.md /usr/local/share/doc/
 # Add the help file
 COPY ./build/help.txt /usr/local/share/doc/run/
 
-#RUN rm -Rf /var/lib/postgresql/9.5/main
+RUN rm -Rf /var/lib/postgresql/9.5/main
 
 # Correct the Error: could not open temporary statistics file "/var/run/postgresql/9.5-main.pg_stat_tmp/global.tmp": No such file or directory
 RUN mkdir -p /var/run/postgresql/9.5-main.pg_stat_tmp
