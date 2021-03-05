@@ -121,8 +121,7 @@ RUN curl -SLO "https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-
 RUN npm install -g carto@0.16.3
 
 # Install CartoCSS template for OpenStreetMap data
-ARG OSM_CARTO_V=5.2.0
-ENV OSM_CARTO_VERSION $OSM_CARTO_V
+ENV OSM_CARTO_VERSION 3.0.1
 RUN cd /tmp && \
     wget https://github.com/gravitystorm/openstreetmap-carto/archive/v$OSM_CARTO_VERSION.tar.gz && \
     tar -xzf v$OSM_CARTO_VERSION.tar.gz && \
